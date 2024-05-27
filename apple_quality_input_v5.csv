@@ -1,0 +1,177 @@
+variable;distribution;lower;median;upper;unit;description;timestep;Erledigt
+desired_number_of_fruits;const;100;NA;100;apples;"""Zielzahl"" Handausdünnung";3;x
+n_trees_per_ha;const;3125;NA;3125;trees/ha;;4;x
+weight_increase_change_overbearing;norm;-0.2;NA;-0.1;%/100;;2 und 3;s
+weight_increase_change_underbearing;norm;0.1;NA;0.5;%/100;;2 und 3;s
+daily_weight_increase_tp2_tp3;posnorm;0.25;NA;0.5;g/day;abgeleitet von Lakso et al 1995;2;x
+daily_weight_increase_tp3_tp4;posnorm;1.4;NA;2;g/day;abgeleitet von Lakso et al 1995 and 2017;3;x
+daily_weight_increase_tp4_harvest;posnorm;1.4;NA;2;g/day;abgeleitet von Lakso et al 1995 and 2017;4;x
+expected_fruit_weight_tp2;posnorm;0.27;NA;1.85;g;eigene daten;1 und 2;x
+june_drop_increase_bad_seed_structure;posnorm;0.05;NA;1.38;%/100;;2;x
+june_drop_increase_overbearing;posnorm;0.2;NA;0.3;%/100;;2;s
+june_drop_increase_stress_and_supply_problem;posnorm;0.1;NA;0.15;%/100;;2;s
+manual_thinning_mistake;posnorm;1;NA;12;%;var_CV;3;s
+n_flowers_per_cluster;posnorm;4;NA;7;digit;Meist 5 bei Gala 6 bei GS66 (Frostbonitur 2023);1;x
+percentage_diameter_increase_tp4_harvest;posnorm;0.05;NA;0.15;%/100;currently not used;;
+timespan_tp1_harvest;posnorm;120;NA;180;days;Von der Blüte zur Ernte (müssen nochmal optimiert werden, sortenspezifisch!);;s
+timespan_tp1_tp2;posnorm;15;NA;20;days;Von der Büte bis zur Fruchtausdünnung;;
+timespan_tp1_tp3;posnorm;28;NA;42;days;Von der Blüte bis zum Ende des Junifalls (4 bis 6 Wochen nach der Blüte);;
+timespan_tp4_harvest;posnorm;25;NA;35;days;ca. 4 Wochen vor der Ernte;;x
+additional_pre_harvest_fruit_drop_storm;tnorm_0_1;0.01;NA;0.3;%;;4;s
+aphids_damage_tp2_tp3;tnorm_0_1;0.005;NA;0.14;%/100;;2;x
+aphids_damage_tp3_tp4;tnorm_0_1;0.005;NA;0.14;%/100;;3;x
+aphids_damage_tp4_harvest;tnorm_0_1;0.005;NA;0.14;%/100;;4;x
+aphids_risk_tp2_tp3;tnorm_0_1;0.03;NA;0.05;%/100;;2;x
+aphids_risk_tp3_tp4;tnorm_0_1;0.03;NA;0.05;%/100;;3;x
+aphids_risk_tp4_harvest;tnorm_0_1;0.03;NA;0.05;%/100;;4;x
+bad_seed_structure_deformation_tp2;tnorm_0_1;0.05;NA;0.45;%/100;;2;x
+bad_seed_structure_reduce_pollinator_support;tnorm_0_1;0.35;NA;0.55;%/100;;2;x
+bird_damage_tp2_tp3;tnorm_0_1;0.0025;NA;0.0125;%/100;;2;x
+bird_damage_tp3_tp4;tnorm_0_1;0.005;NA;0.025;%/100;;3;x
+bird_damage_tp4_harvest;tnorm_0_1;0.0075;NA;0.0375;%/100;;4;x
+bird_risk_tp2_tp3;tnorm_0_1;0.1;NA;0.4;%/100;;2;x
+bird_risk_tp3_tp4;tnorm_0_1;0.7;NA;0.9;%/100;;3;x
+bird_risk_tp4_harvest;tnorm_0_1;0.7;NA;0.9;%/100;;4;x
+bitter_pit_damage_leaf_fertilization_tp3_tp4;tnorm_0_1;0.03;NA;0.12;%/100;;3;x
+bitter_pit_damage_leaf_fertilization_tp4_harvest;tnorm_0_1;0.03;NA;0.12;%/100;;4;x
+bitter_pit_damage_tp3_tp4;tnorm_0_1;0.05;NA;0.2;%/100;;3;x
+bitter_pit_damage_tp4_harvest;tnorm_0_1;0.05;NA;0.2;%/100;;4;x
+bitter_pit_risk_leaf_fertilization_tp3_tp4;tnorm_0_1;0.03;NA;0.55;%/100;;3;x
+bitter_pit_risk_leaf_fertilization_tp4_harvest;tnorm_0_1;0.03;NA;0.55;%/100;;4;x
+bitter_pit_risk_tp3_tp4;tnorm_0_1;0.03;NA;0.77;%/100;;3;x
+bitter_pit_risk_tp4_harvest;tnorm_0_1;0.03;NA;0.77;%/100;;4;x
+codling_moth_damage_tp2_tp3;tnorm_0_1;0.002;NA;0.01;%/100;;2;x
+codling_moth_damage_tp3_tp4;tnorm_0_1;0.002;NA;0.01;%/100;;3;x
+codling_moth_damage_tp4_harvest;tnorm_0_1;0.002;NA;0.01;%/100;;4;x
+codling_moth_risk_tp2_tp3;tnorm_0_1;0.8;NA;0.9;%/100;;2;eigene Schätzung, Wickler eig immer da
+codling_moth_risk_tp3_tp4;tnorm_0_1;0.8;NA;0.9;%/100;;3;eigene Schätzung, Wickler eig immer da
+codling_moth_risk_tp4_harvest;tnorm_0_1;0.8;NA;0.9;%/100;;4;eigene Schätzung, Wickler eig immer da
+color_damage_decrease_removing_leaves_tp4_harvest;tnorm_0_1;0.007;NA;0.27;%/100;;4;x
+color_damage_decrease_summer_pruning_tp4_harvest;tnorm_0_1;0.01;NA;0.4;%/100;;4;x
+color_damage_increase_hailnet_tp4_harvest;tnorm_0_1;0.15;NA;0.8;%/100;;4;x
+color_damage_increase_no_cold_nights_tp4_harvest;tnorm_0_1;0.2;NA;0.5;%/100;;4;x
+color_damage_variety;tnorm_0_1;0.06;NA;0.42;%/100;;4;x
+color_risk_decrease_removing_leaves_tp4_harvest;tnorm_0_1;0.6;NA;0.8;%/100;wahrscheinlichkeit das es einen effect hat recht hoch;4;x
+color_risk_decrease_summer_pruning_tp4_harvest;tnorm_0_1;0.6;NA;0.8;%/100;wahrscheinlichkeit das es einen effect hat recht hoch;4;x
+color_risk_increase_hailnet_tp4_harvest;tnorm_0_1;0.6;NA;0.8;%/100;wahrscheinlichkeit das es einen effect hat recht hoch;4;x
+color_risk_increase_no_cold_nights_tp4_harvest;tnorm_0_1;0.6;NA;0.8;%/100;wahrscheinlichkeit das es einen effect hat recht hoch;4;x
+color_risk_variety;tnorm_0_1;0.33;NA;0.75;%/100;;4;s
+decrease_fruit_drop_pollinator_support_tp1;tnorm_0_1;0.7;NA;0.9;%/100;;1;x
+dirty_fruits_damage_tp4_harvest;tnorm_0_1;0.02;NA;0.1;%/100;;4;s
+dirty_fruits_risk_tp4_harvest;tnorm_0_1;0.4;NA;0.8;%/100;;4;s
+drop_rate_frist_drop;tnorm_0_1;0.38;NA;0.84;%/100;Heinicke, A. J. (1917) Seite 52 (14 im Dokument);1;x
+drought_risk_irrigation_tp3_tp4;tnorm_0_1;0.02;NA;0.1;%/100;;3;s
+drought_risk_irrigation_tp4_harvest;tnorm_0_1;0.02;NA;0.1;%/100;;4;s
+drought_risk_tp3_tp4;tnorm_0_1;0.15;NA;0.25;%/100;;3;x
+drought_risk_tp4_harvest;tnorm_0_1;0.15;NA;0.25;%/100;;4;x
+efficiency_chemical_thinning;tnorm_0_1;0.3;NA;0.5;%/100;Pflanzenschutz RLP 2022 Seite 76;1;x
+effiecency_mechanical_thinning;tnorm_0_1;0.3;NA;0.8;%/100;Pflanzenschutz RLP 2022 Seite 76;1;x
+frost_protection_efficiency;tnorm_0_1;0.6;NA;0.99;%/100;Überkronenberegnung: Frostschutzmodell;1;x
+frost_risk;tnorm_0_1;0.04;NA;0.1;%/100;Schädliches Frostereignis (berechne aus frost_risk und share_harmful_frost (Rheinland) aus dem DA modell. Untere Grenzen 0.45*0.09, obere Grenze 0.9*0.11;1;x
+fruit_scab_damage_tp2_tp3;tnorm_0_1;0.0015;NA;0.08;%/100;;2;x
+fruit_scab_damage_tp3_tp4;tnorm_0_1;0.0015;NA;0.08;%/100;;3;x
+fruit_scab_damage_tp4_harvest;tnorm_0_1;0.0015;NA;0.08;%/100;;4;x
+fruit_scab_risk_tp2_tp3;tnorm_0_1;0.8;NA;0.9;%/100;;2;s
+fruit_scab_risk_tp3_tp4;tnorm_0_1;0.8;NA;0.9;%/100;;3;s
+fruit_scab_risk_tp4_harvest;tnorm_0_1;0.8;NA;0.9;%/100;;4;s
+hail_damage_hailnet_tp2_tp3;tnorm_0_1;0.05;NA;0.1;%/100;eigene Schätzung (Ränder);2;x
+hail_damage_hailnet_tp3_tp4;tnorm_0_1;0.05;NA;0.1;%/100;eigene Schätzung (Ränder);3;x
+hail_damage_hailnet_tp4_harvest;tnorm_0_1;0.05;NA;0.1;%/100;eigene Schätzung (Ränder);4;x
+hail_damage_tp2_tp3;tnorm_0_1;0.1;NA;0.9;%/100;"eigene Schätung ""alles möglich""";2;x
+hail_damage_tp3_tp4;tnorm_0_1;0.1;NA;0.9;%/100;"eigene Schätung ""alles möglich""";3;x
+hail_damage_tp4_harvest;tnorm_0_1;0.1;NA;0.9;%/100;"eigene Schätung ""alles möglich""";4;x
+hail_risk_hailnet_tp2_tp3;tnorm_0_1;0.02;NA;0.1;%/100;eigene Schätzung (zu spät geschlossen);2;x
+hail_risk_hailnet_tp3_tp4;tnorm_0_1;0.02;NA;0.05;%/100;eigene Schätzung (Ränder/Problme, wenn nicht richtig geschlossen);3;x
+hail_risk_hailnet_tp4_harvest;tnorm_0_1;0.02;NA;0.05;%/100;eigene Schätzung (Ränder/Problme, wenn nicht richtig geschlossen);4;x
+hail_risk_tp2_tp3;tnorm_0_1;0.26;NA;0.9;%/100;;2;x
+hail_risk_tp3_tp4;tnorm_0_1;0.14;NA;0.9;%/100;;3;x
+hail_risk_tp4_harvest;tnorm_0_1;0.07;NA;0.57;%/100;;4;x
+increase_fruit_drop_unfavorable_weather_tp1;tnorm_0_1;0.1;NA;0.33;%/100;;1;s
+insect_damage_tp1_tp2;tnorm_0_1;0.05;NA;0.15;%/100;;1;x
+june_drop_rate;tnorm_0_1;0.03;NA;0.5;%/100;;2;x
+mechanical_damage_tp1_tp2;tnorm_0_1;0.005;NA;0.035;%/100;;1;x
+mechanical_damage_tp2_tp3;tnorm_0_1;0.005;NA;0.035;%/100;;2;x
+mechanical_damage_tp3_tp4;tnorm_0_1;0.005;NA;0.035;%/100;;3;x
+mechanical_damage_tp4_harvest;tnorm_0_1;0.005;NA;0.035;%/100;;4;x
+mechanical_risk_tp1_tp2;tnorm_0_1;0.4;NA;0.45;%/100;;1;x
+mechanical_risk_tp2_tp3;tnorm_0_1;0.4;NA;0.45;%/100;;2;x
+mechanical_risk_tp3_tp4;tnorm_0_1;0.4;NA;0.45;%/100;;3;x
+mechanical_risk_tp4_harvest;tnorm_0_1;0.4;NA;0.45;%/100;;4;x
+no_cold_nights_risk_tp4_harvest;tnorm_0_1;0.1;NA;0.25;%/100;;4;s
+other_fungal_diseases_damage_tp2_tp3;tnorm_0_1;0.05;NA;0.1;%/100;;2;s
+other_fungal_diseases_damage_tp3_tp4;tnorm_0_1;0.1;NA;0.3;%/100;;3;x
+other_fungal_diseases_damage_tp4_harvest;tnorm_0_1;0.2;NA;0.6;%/100;;4;s
+other_fungal_diseases_risk_tp2_tp3;tnorm_0_1;0.6;NA;0.8;%/100;;2;s
+other_fungal_diseases_risk_tp3_tp4;tnorm_0_1;0.6;NA;0.8;%/100;;3;s
+other_fungal_diseases_risk_tp4_harvest;tnorm_0_1;0.6;NA;0.8;%/100;;4;s
+other_insects_damage_tp2_tp3;tnorm_0_1;0.002;NA;0.01;%/100;;2;s
+other_insects_damage_tp3_tp4;tnorm_0_1;0.002;NA;0.01;%/100;;3;s
+other_insects_damage_tp4_harvest;tnorm_0_1;0.002;NA;0.01;%/100;;4;s
+other_insects_risk_tp2_tp3;tnorm_0_1;0.8;NA;0.9;%/100;;2;s
+other_insects_risk_tp3_tp4;tnorm_0_1;0.8;NA;0.9;%/100;;3;s
+other_insects_risk_tp4_harvest;tnorm_0_1;0.8;NA;0.9;%/100;;4;s
+other_physiological_disorders_damage_leaf_fertilization_tp3_tp4;tnorm_0_1;0.03;NA;0.12;%/100;;3;s
+other_physiological_disorders_damage_leaf_fertilization_tp4_harvest;tnorm_0_1;0.03;NA;0.12;%/100;;4;s
+other_physiological_disorders_damage_tp3_tp4;tnorm_0_1;0.05;NA;0.2;%/100;;3;s
+other_physiological_disorders_damage_tp4_harvest;tnorm_0_1;0.05;NA;0.2;%/100;;4;s
+other_physiological_disorders_risk_leaf_fertilization_tp3_tp4;tnorm_0_1;0.03;NA;0.55;%/100;;3;s
+other_physiological_disorders_risk_leaf_fertilization_tp4_harvest;tnorm_0_1;0.03;NA;0.55;%/100;;4;s
+other_physiological_disorders_risk_tp3_tp4;tnorm_0_1;0.03;NA;0.77;%/100;;3;s
+other_physiological_disorders_risk_tp4_harvest;tnorm_0_1;0.03;NA;0.77;%/100;;4;s
+percentage_frost_damage;tnorm_0_1;0.25;NA;0.8;%/100;Daten Frostschutzmodell;1;x
+percentage_visibly_damaged_tp2;tnorm_0_1;0.025;NA;0.1;%/100;;2;s
+percentage_visibly_damaged_tp3;tnorm_0_1;0.1;NA;0.15;%/100;;3;s
+percentage_visibly_damaged_tp4;tnorm_0_1;0.15;NA;0.2;%/100;;4;s
+pre_harvest_fruit_drop_natural;tnorm_0_1;0.4;NA;0.8;%/100;;4;x
+pre_harvest_fruit_drop_spraying;tnorm_0_1;0.05;NA;0.2;%/100;Use of sprays to reduce pre-harvest fruit drop e.g. NAA;4;x
+quality_reduce_frost_tp1_tp2;tnorm_0_1;0.05;NA;0.2;%/100;;1;s
+quality_reduce_insects_tp1_tp2;tnorm_0_1;0.05;NA;0.2;%/100;;1;s
+risk_bad_seed_structure;tnorm_0_1;0.15;NA;0.25;%/100;;2;s
+risk_insect_damage_tp1_tp2;tnorm_0_1;0.2;NA;0.4;%/100;;1;s
+risk_of_storm_pre_harvest_tp_4;tnorm_0_1;0.1;NA;0.5;%/100;;4;s
+risk_stress_and_supply_influence_irrigation_tp2_tp3;tnorm_0_1;0.02;NA;0.1;%/100;von drought;2;x
+risk_stress_and_supply_influence_tp2_tp3;tnorm_0_1;0.15;NA;0.25;%/100;von drought;2;x
+risk_unfavorable_weather_tp1;tnorm_0_1;0.1;NA;0.33;%/100;;1;x
+rotting_damage_tp3_tp4;tnorm_0_1;0.004;NA;0.0175;%/100;;3;x
+rotting_damage_tp4_harvest;tnorm_0_1;0.006;NA;0.07;%/100;;4;x
+rotting_risk_tp3_tp4;tnorm_0_1;0.5;NA;0.9;%/100;;3;s
+rotting_risk_tp4_harvest;tnorm_0_1;0.5;NA;0.9;%/100;;4;s
+sunburn_damage_climatizing_irrigation_tp3_tp4;tnorm_0_1;0.00625;NA;0.15;%/100;;3;x
+sunburn_damage_climatizing_irrigation_tp4_harvest;tnorm_0_1;0.00625;NA;0.15;%/100;;4;x
+sunburn_damage_hailnet_climatizing_irrigation_tp3_tp4;tnorm_0_1;0.00625;NA;0.1;%/100;;3;x
+sunburn_damage_hailnet_climatizing_irrigation_tp4_harvest;tnorm_0_1;0.00625;NA;0.1;%/100;;4;x
+sunburn_damage_hailnet_tp3_tp4;tnorm_0_1;0.01;NA;0.03;%/100;;3;x
+sunburn_damage_hailnet_tp4_harvest;tnorm_0_1;0.01;NA;0.03;%/100;;4;x
+sunburn_damage_tp3_tp4;tnorm_0_1;0.025;NA;0.2;%/100;;3;x
+sunburn_damage_tp4_harvest;tnorm_0_1;0.025;NA;0.2;%/100;;4;x
+sunburn_risk_climatizing_irrigation_tp3_tp4;tnorm_0_1;0.25;NA;0.45;%/100;;3;s
+sunburn_risk_climatizing_irrigation_tp4_harvest;tnorm_0_1;0.25;NA;0.45;%/100;;4;s
+sunburn_risk_hailnet_climatizing_irrigation_tp3_tp4;tnorm_0_1;0.15;NA;0.3;%/100;;3;s
+sunburn_risk_hailnet_climatizing_irrigation_tp4_harvest;tnorm_0_1;0.15;NA;0.3;%/100;;4;s
+sunburn_risk_hailnet_tp3_tp4;tnorm_0_1;0.2;NA;0.4;%/100;;3;s
+sunburn_risk_hailnet_tp4_harvest;tnorm_0_1;0.2;NA;0.4;%/100;;4;s
+sunburn_risk_tp3_tp4;tnorm_0_1;0.45;NA;0.55;%/100;;3;x
+sunburn_risk_tp4_harvest;tnorm_0_1;0.45;NA;0.55;%/100;;4;x
+thinner_efficiency_chemical_fruit_thinning;tnorm_0_1;0.15;NA;0.5;%/100;Pflanzenschutz RLP 2022 Seite 76;4;x
+weight_increase_reducing_factor_drought_tp3_tp4;tnorm_0_1;0.05;NA;0.8;%/100;;3;x
+weight_increase_reducing_factor_drought_tp4_harvest;tnorm_0_1;0.65;NA;0.8;%/100;;4;x
+weight_increase_reducing_factor_stress_tp2_tp3;tnorm_0_1;0.05;NA;0.95;%/100;;2;s
+percentage_of_hail_damaged_falling;tnorm_0_1;0.1;NA;0.5;%/100;;2,3,4;s
+additional_sunburn_removing_leaves_tp3_tp4;tnorm_0_1;0.01;NA;0.03;%/100;;3;x
+additional_sunburn_removing_leaves_tp4_harvest;tnorm_0_1;0.01;NA;0.03;%/100;;4;x
+sunburn_reduce_kaolin_tp3_tp4;tnorm_0_1;0.21;NA;0.58;%/100;;3;x
+sunburn_reduce_kaolin_tp4_harvest;tnorm_0_1;0.21;NA;0.58;%/100;;4;x
+excessive_russeting_damage_tp4_harvest;tnorm_0_1;0.05;NA;0.07;%/100;;;s
+excessive_russeting_risk_tp4_harvest;tnorm_0_1;0.1;NA;0.3;%/100;;;s
+excessive_russeting_damage_tp2_tp3;tnorm_0_1;0.05;NA;0.07;%/100;;;s
+excessive_russeting_risk_tp2_tp3;tnorm_0_1;0.1;NA;0.3;%/100;;;s
+excessive_russeting_damage_tp3_tp4;tnorm_0_1;0.05;NA;0.07;%/100;;;s
+excessive_russeting_risk_tp3_tp4;tnorm_0_1;0.1;NA;0.3;%/100;;;s
+fruit_cracking_damage_tp4_harvest;tnorm_0_1;0.005;NA;0.15;%/100;;;x
+fruit_cracking_risk_tp4_harvest;tnorm_0_1;0.1;NA;0.15;%/100;;;s
+fruit_cracking_damage_tp2_tp3;tnorm_0_1;0.005;NA;0.15;%/100;;;x
+fruit_cracking_risk_tp2_tp3;tnorm_0_1;0.1;NA;0.15;%/100;;;s
+fruit_cracking_damage_tp3_tp4;tnorm_0_1;0.005;NA;0.15;%/100;;;x
+fruit_cracking_risk_tp3_tp4;tnorm_0_1;0.1;NA;0.15;%/100;;;s
+tree_losses_mice_risk_tp1_harvest;tnorm_0_1;0.2;NA;0.6;%/100;;;x
+lost_trees_mice_tp1_harvest;tnorm_0_1;0.01;NA;0.1;%/100;;;x

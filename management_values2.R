@@ -1,0 +1,1 @@
+Management_values<-read.csv("test_management_values2.csv")

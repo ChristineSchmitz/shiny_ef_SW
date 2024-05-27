@@ -1,0 +1,11 @@
+variable;distribution;lower;median;upper;unit;description;timestep;Erledigt
+n_fruits_per_tree_tp4;posnorm;30;NA;110;apples;;;
+diameter_tp4;posnorm;40;NA;60;mm;currently not used;;
+fruit_weight_tp4;posnorm;80;NA;100;g;;;
+n_fruits_per_tree_tp3;posnorm;70;NA;180;apples;;;
+lower_optimum_fruits_per_tree;posnorm;70;NA;80;apples;;;
+width_optimum_bearing_range;posnorm;10;NA;20;apples;;;
+fruit_weight_tp3;posnorm;8;NA;30;g;;;
+n_fruits_per_tree_tp2;posnorm;80;NA;400;apples;Fruchtansatz;;
+fruit_weight_tp2;posnorm;0.2;NA;1.85;g;;;
+n_flower_clusters_tp1;posnorm;20;NA;140;;;;

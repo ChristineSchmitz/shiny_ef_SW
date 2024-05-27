@@ -1,0 +1,3 @@
+variable;distribution;lower;median;upper;unit
+price_per_kg;posnorm;0.55;NA;0.65;Euro/kg
+production_costs_per_ha;posnorm;15000;NA;18000;Euro/ha
