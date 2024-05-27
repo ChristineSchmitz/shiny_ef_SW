@@ -466,8 +466,8 @@ server <- function(input, output) {
     unit<-c("apples","%","trees","g")
     Apple_prediction_slider_input<-data.frame(variable,distribution,lower,median,upper,unit)
     #orchard_data<-read.csv2("2024_test_apple/test_input.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character"), sep = ";", dec = ".")
-    Apple_prediction_input_raw<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
-    #Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)#sobald diese Zeile aktiviert ist hängt es bis man eine Wert geändert hat
+    #Apple_prediction_input_raw<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
+    Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)#sobald diese Zeile aktiviert ist hängt es bis man eine Wert geändert hat
     
     source("management_values.R")
 
@@ -563,14 +563,14 @@ server <- function(input, output) {
     }
 
     #Monte Carlo####
-    apple_quality_and_yield_mc_simulation_tp4 <- mcSimulation(estimate = as.estimate(Apple_prediction_input_raw),
-                                                              model_function = tp_4_quality_and_yield_prediction,
-                                                              numberOfModelRuns = input$runs,
-                                                              functionSyntax = "plainNames")
-    # apple_quality_and_yield_mc_simulation_tp4 <- mcSimulation(estimate = as.estimate(Apple_prediction_input),
+    # apple_quality_and_yield_mc_simulation_tp4 <- mcSimulation(estimate = as.estimate(Apple_prediction_input_raw),
     #                                                           model_function = tp_4_quality_and_yield_prediction,
     #                                                           numberOfModelRuns = input$runs,
     #                                                           functionSyntax = "plainNames")
+    apple_quality_and_yield_mc_simulation_tp4 <- mcSimulation(estimate = as.estimate(Apple_prediction_input),
+                                                              model_function = tp_4_quality_and_yield_prediction,
+                                                              numberOfModelRuns = input$runs,
+                                                              functionSyntax = "plainNames")
 
     Plot_a<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp4,
                        vars = c("high_quality_yield"),
