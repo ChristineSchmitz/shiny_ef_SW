@@ -437,6 +437,8 @@ server <- function(input, output) {
       highlight = TRUE
     )
   )
+  
+  outputOptions(output, "id-table", suspendWhenHidden = FALSE)
 
   output$TP4 <- renderPlot({
     Management_values2<-data.frame(management_measure=c("spray_against_pre_harvest_fruit_drop",
