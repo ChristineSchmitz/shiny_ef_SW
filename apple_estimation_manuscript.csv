@@ -1,0 +1,16 @@
+variable;distribution;lower;median;upper;unit;description
+fruit_diameter_tp3;posnorm;2;NA;3.5;cm;Fruit diameter at tp3
+fruit_diameter_tp4;posnorm;5.9;NA;6.5;cm;Fruit diameter at tp4
+lower_optimum_fruits_per_tree;posnorm;70;NA;80;apples;Lower bound of the optimum range of number of apples per tree
+n_flower_clusters_tp1;posnorm;70;NA;300;clusters;Mean number of flower clusters at tp1
+n_fruits_per_tree_tp2;posnorm;80;NA;600;apples;Mean number of fruitlets per tree at tp2
+n_fruits_per_tree_tp3;posnorm;80;NA;140;apples;Mean number of fruits per tree at tp3
+n_fruits_per_tree_tp4;posnorm;75;NA;120;apples;Mean number of fruits per tree at tp4
+n_trees_per_ha_tp1;const;3125;NA;3125;trees/ha;Number of trees per ha at tp1
+n_trees_per_ha_tp2;const;3125;NA;3125;trees/ha;Number of trees per ha at tp2
+n_trees_per_ha_tp3;const;3125;NA;3125;trees/ha;Number of trees per ha at tp3
+n_trees_per_ha_tp4;const;3125;NA;3125;trees/ha;Number of trees per ha at tp4
+percentage_visibly_damaged_tp2;tnorm_0_1;0.025;NA;0.1;%/100;Percentage of visibly damaged apples at tp2
+percentage_visibly_damaged_tp3;tnorm_0_1;0.1;NA;0.15;%/100;Percentage of visibly damaged apples at tp3
+percentage_visibly_damaged_tp4;tnorm_0_1;0.1;NA;0.2;%/100;Percentage of visibly damaged apples at tp4
+width_optimum_bearing_range;posnorm;30;NA;40;apples;Width of the optimum range of number of apples per trees

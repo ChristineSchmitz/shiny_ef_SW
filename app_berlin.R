@@ -45,8 +45,8 @@ ui <- fluidPage(
                           sliderInput("x",
                                       "Bäume pro ha:",
                                       min = 1,
-                                      max = 5000,
-                                      value = 2571),
+                                      max = 3500,
+                                      value = 3125),
                           sliderInput("y",
                                       "Früchte pro Baum (4 Wochen vor Ernte):",
                                       min = 1,
@@ -59,13 +59,13 @@ ui <- fluidPage(
                                       value = c(10,20)),
                           sliderInput("Durchmesser",
                                       "Durchmesser 4 Wochen vor Ernte [cm]:",
-                                      min = 0.5,
+                                      min = 1,
                                       max = 10,
-                                      value = c(5.9,6.5)),
+                                      value = c(5,6)),
                           sliderInput("runs",
                                       "Anzahl Monte-Carlo Durchläufe:",
                                       min = 1,
-                                      max = 15000,
+                                      max = 5000,
                                       value = 1000),
                           tags$style(HTML(".radio-inline {margin-right: 42px;}")),
                           radioButtons("drop",
@@ -140,7 +140,7 @@ ui <- fluidPage(
                         
                         # Show a plot of the generated distribution
                         mainPanel(
-                          plotOutput("TP4",height = "800px")#,
+                          plotOutput("TP4",height = "600px")#,
                           #plotOutput("distPlot2")
                         ))),
              tabPanel(title = (span(img(src="gruener_Apfel.png", height =80),"Nach dem Junifall")),
@@ -149,8 +149,8 @@ ui <- fluidPage(
                           sliderInput("x3",
                                       "Bäume pro ha:",
                                       min = 1,
-                                      max = 5000,
-                                      value = 200),
+                                      max = 3500,
+                                      value = 3125),
                           sliderInput("y3",
                                       "Äpfel pro Baum (nach dem Junifall):",
                                       min = 1,
@@ -169,7 +169,7 @@ ui <- fluidPage(
                           sliderInput("runs3",
                                       "Anzahl Monte-Carlo Durchläufe:",
                                       min = 1,
-                                      max = 15000,
+                                      max = 5000,
                                       value = 1000),
                           
                           tags$style(HTML(".radio-inline {margin-right: 42px;}")),
@@ -227,7 +227,7 @@ ui <- fluidPage(
                                        inline = TRUE,
                                        #width = "400px",
                                        selected = 0)
-
+                          
                           # awesomeCheckboxGroup(
                           #   inputId = "work3",
                           #   label = "Management measures",
@@ -247,11 +247,11 @@ ui <- fluidPage(
                           #               "irrigation"),
                           #   selected = NULL)
                         ),
-
-
+                        
+                        
                         # Show a plot of the generated distribution
                         mainPanel(
-                          plotOutput("TP3",height = "800px")#,
+                          plotOutput("TP3",height = "600px")#,
                           #plotOutput("distPlot2")
                         ))),
              tabPanel(title = (span(img(src="gruener_Apfel_kl.png", height =80),"Vor der Fruchtausdünnung")),
@@ -260,8 +260,8 @@ ui <- fluidPage(
                           sliderInput("x2",
                                       "Bäume pro ha:",
                                       min = 1,
-                                      max = 5000,
-                                      value = 200),
+                                      max = 3500,
+                                      value = 3125),
                           sliderInput("y2",
                                       "Fruchtansätze pro Baum:",
                                       min = 1,
@@ -280,7 +280,7 @@ ui <- fluidPage(
                           sliderInput("runs2",
                                       "Anzahl Monte-Carlo Durchläufe:",
                                       min = 1,
-                                      max = 15000,
+                                      max = 5000,
                                       value = 1000),
                           
                           tags$style(HTML(".radio-inline {margin-right: 42px;}")),
@@ -374,7 +374,7 @@ ui <- fluidPage(
                         
                         # Show a plot of the generated distribution
                         mainPanel(
-                          plotOutput("TP2",height = "800px")#,
+                          plotOutput("TP2",height = "600px")#,
                           #plotOutput("distPlot2")
                         ))),
              tabPanel(title = (span(img(src="Bluete.png", height =80),"Vollblüte")),
@@ -383,8 +383,8 @@ ui <- fluidPage(
                           sliderInput("trees_per_ha1",
                                       "Bäume pro ha:",
                                       min = 1,
-                                      max = 5000,
-                                      value = 2571),
+                                      max = 3500,
+                                      value = 3125),
                           sliderInput("flower_clusters_per_tree1",
                                       "Blütencluster pro Baum:",
                                       min = 1,
@@ -395,15 +395,15 @@ ui <- fluidPage(
                           #             min = 1,
                           #             max = 100,
                           #             value = c(10,20)),
-                          # sliderInput("Durchmesser",
-                          #             "FruchtDurchmesser 4 Wochen vor Ernte [g]:",
+                          # sliderInput("Gewicht",
+                          #             "Fruchtgewicht 4 Wochen vor Ernte [g]:",
                           #             min = 1,
                           #             max = 400,
                           #             value = c(100,200)),
                           sliderInput("runs1",
                                       "Anzahl Monte-Carlo Durchläufe:",
                                       min = 1,
-                                      max = 15000,
+                                      max = 5000,
                                       value = 1000),
                           tags$style(HTML(".radio-inline {margin-right: 42px;}")),
                           radioButtons("chemical_flower_thinning1",
@@ -514,23 +514,23 @@ ui <- fluidPage(
                         
                         # Show a plot of the generated distribution
                         mainPanel(
-                          plotOutput("TP1",height = "800px")#,
+                          plotOutput("TP1",height = "600px")#,
                           #plotOutput("distPlot2")
-                        ))),
-             tabPanel(title = (span(img(src="data.png", height =80),"Datenübersicht")),
-                      
-                      
-                      # Show a plot of the generated distribution
-                      mainPanel(
-                        #tags$h2(i18n("Edit data"), align = "center"),
-                        edit_data_ui(id = "id")#,
-                        #verbatimTextOutput("result")
-
-                        #dataTableOutput("input_datasheet")#,
-                        #plotOutput("distPlot2")
-                      ))
-  #https://stackoverflow.com/questions/30086881/how-can-i-control-the-size-of-the-numbers-on-my-slider-in-shiny
-  
+                        )))#,
+             # tabPanel(title = (span(img(src="data.png", height =80),"Datenübersicht")),
+             #          
+             #          
+             #          # Show a plot of the generated distribution
+             #          mainPanel(
+             #            #tags$h2(i18n("Edit data"), align = "center"),
+             #            edit_data_ui(id = "id")#,
+             #            #verbatimTextOutput("result")
+             #            
+             #            #dataTableOutput("input_datasheet")#,
+             #            #plotOutput("distPlot2")
+             #          ))
+             #https://stackoverflow.com/questions/30086881/how-can-i-control-the-size-of-the-numbers-on-my-slider-in-shiny
+             
   )
 )
 
@@ -538,68 +538,68 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 #Server####
 server <- function(input, output) {
-  edited_r <- edit_data_server(
-    id = "id",
-    data_r = reactive(Apple_prediction_input_csv),
-    add = FALSE,
-    update = TRUE,
-    delete = FALSE,
-    download_csv = TRUE,
-    download_excel = TRUE,
-    file_name_export = "datas",
-    # var_edit = c("name", "job", "credit_card_provider", "credit_card_security_code"),
-    #var_mandatory = c("name", "job"),
-    var_labels = list(
-      variable = "Variable",
-      distribution = "Verteilung",
-      lower = "Untere",
-      median="Median (NA)",
-      upper = "Obere",
-      Unit = "Einheit"
-    ),
-    var_edit=list("lower", "upper"),
-    add_default_values = list(
-      name = "Please enter your name here",
-      date_obtained = Sys.Date()
-    ),
-    n_column = 2,
-    modal_size = "l",
-    modal_easy_close = TRUE,
-    reactable_options = list(
-      defaultColDef = colDef(filterable = TRUE),
-      selection = "single",
-      columns = list(
-        lower = colDef(name = "Untere", style = list(fontWeight = "bold")),
-        upper = colDef(name = "Obere", style = list(fontWeight = "bold"))),
-      bordered = TRUE,
-      compact = TRUE,
-      searchable = TRUE,
-      highlight = TRUE
-    )
-  )
+  # edited_r <- edit_data_server(
+  #   id = "id",
+  #   data_r = reactive(Apple_prediction_input_csv),
+  #   add = FALSE,
+  #   update = TRUE,
+  #   delete = FALSE,
+  #   download_csv = TRUE,
+  #   download_excel = TRUE,
+  #   file_name_export = "datas",
+  #   # var_edit = c("name", "job", "credit_card_provider", "credit_card_security_code"),
+  #   #var_mandatory = c("name", "job"),
+  #   var_labels = list(
+  #     variable = "Variable",
+  #     distribution = "Verteilung",
+  #     lower = "Untere",
+  #     median="Median (NA)",
+  #     upper = "Obere",
+  #     Unit = "Einheit"
+  #   ),
+  #   var_edit=list("lower", "upper"),
+  #   add_default_values = list(
+  #     name = "Please enter your name here",
+  #     date_obtained = Sys.Date()
+  #   ),
+  #   n_column = 2,
+  #   modal_size = "l",
+  #   modal_easy_close = TRUE,
+  #   reactable_options = list(
+  #     defaultColDef = colDef(filterable = TRUE),
+  #     selection = "single",
+  #     columns = list(
+  #       lower = colDef(name = "Untere", style = list(fontWeight = "bold")),
+  #       upper = colDef(name = "Obere", style = list(fontWeight = "bold"))),
+  #     bordered = TRUE,
+  #     compact = TRUE,
+  #     searchable = TRUE,
+  #     highlight = TRUE
+  #   )
+  # )
+  # 
+  # outputOptions(output, "id-table", suspendWhenHidden = FALSE)
   
-  outputOptions(output, "id-table", suspendWhenHidden = FALSE)
-
   output$TP4 <- renderPlot({
     Management_values2<-data.frame(management_measure=c("spray_against_pre_harvest_fruit_drop",
-                                                       "hailnet",
-                                                       "climatizing_ov_irrigation",
-                                                       "leaf_fertilization",
-                                                       "summer_pruning",
-                                                       "removing_leaves",
-                                                       "use_kaolin",
-                                                       "irrigation"),value= as.numeric(c(input$drop,
-                                                                                         input$hailnet,
-                                                                                         input$cl_irri,
-                                                                                         input$foliar_fert,
-                                                                                         input$summer_pruning,
-                                                                                         input$removing_leaves,
-                                                                                         input$kaolin,
-                                                                                         input$irrigation)))
+                                                        "hailnet",
+                                                        "climatizing_ov_irrigation",
+                                                        "leaf_fertilization",
+                                                        "summer_pruning",
+                                                        "removing_leaves",
+                                                        "use_kaolin",
+                                                        "irrigation"),value= as.numeric(c(input$drop,
+                                                                                          input$hailnet,
+                                                                                          input$cl_irri,
+                                                                                          input$foliar_fert,
+                                                                                          input$summer_pruning,
+                                                                                          input$removing_leaves,
+                                                                                          input$kaolin,
+                                                                                          input$irrigation)))
     write.csv(Management_values2, "test_management_values.csv")
     library(decisionSupport)
     library(tidyverse)
-
+    
     variable<-c("apples_per_tree_tp4", "already_damaged_tp4", "trees_per_ha_4","diameter_fruit_tp4")
     distribution<-c("posnorm", "tnorm_0_1","const","posnorm")
     lower<-c(input$y[1],input$z[1]/100,input$x, input$Durchmesser[1])
@@ -608,13 +608,14 @@ server <- function(input, output) {
     unit<-c("apples","%","trees","g")
     Apple_prediction_slider_input<-data.frame(variable,distribution,lower,median,upper,unit)
     #orchard_data<-read.csv2("2024_test_apple/test_input.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character"), sep = ";", dec = ".")
-    #Apple_prediction_input_raw<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
-    Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
+    Apple_prediction_input<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
+    #Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
     
     source("management_values.R")
-
+    
     #Quality and Yield tp4####
-
+    
+    
     tp_4_quality_and_yield_prediction<-function(){
       n_fruits_per_tree_tp4<-round(apples_per_tree_tp4)
       quality_prediction<-quality_tp4_function(n_fruits_4=n_fruits_per_tree_tp4,
@@ -684,7 +685,7 @@ server <- function(input, output) {
                                                        drop_rate_storm_4 = additional_pre_harvest_fruit_drop_storm,
                                                        fruits_per_tree_4 = n_fruits_per_tree_tp4,
                                                        add_fruit_losses_4=quality_prediction$n_falling_hail,
-                                                       #fruit_weight_4 = g_fruit_tp4,
+                                                       #fruit_weight_4 = diameter_fruit_tp4,
                                                        #daily_weight_increase_4 = daily_weight_increase_tp4_harvest,
                                                        timespan_4=timespan_tp4_harvest,
                                                        #trees_per_ha_4 = n_trees_per_ha,
@@ -722,40 +723,54 @@ server <- function(input, output) {
                                                               model_function = tp_4_quality_and_yield_prediction,
                                                               numberOfModelRuns = input$runs,
                                                               functionSyntax = "plainNames")
-
-    Plot_a<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp4,
-                       vars = c("high_quality_yield_diameter"),
+    plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp4,
+                       vars = c("high_quality_yield_diameter","total_yield_diameter"),
                        method = 'smooth_simple_overlay',
-                       base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Qualitätsertrag [t/ha]")+
+                       base_size = 7,
+                       colors = c("#0A655E", "#429323"),
+                       old_names = c("high_quality_yield_diameter","total_yield_diameter"),
+                       new_names = c("Qualitätsertrag","Gesamtertrag"))+
+      theme(axis.text = element_text(colour = "black", size = 15),
+            axis.title = element_text(colour = "black", size = 15),
+            legend.position = "inside",
+            legend.position.inside = c(0.7,0.8),
+            legend.text = element_text(size = 15),
+            legend.title = element_blank())+
+      xlab("Ertrag [t/ha]")+
       ylab("Häufigkeit")
-    Plot_b<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp4,
-                       vars = c("total_yield_diameter"),
-                       method = 'smooth_simple_overlay',
-                       base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Gesamtertrag [t/ha]")+
-      ylab("Häufigkeit")
-    Plot_c<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp4,
-                       vars = c("fruits_per_tree"),
-                       method = 'smooth_simple_overlay',
-                       base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Früchte pro Baum")+
-      ylab("Häufigkeit")
-
-    library(patchwork)
-    Plots_combined <- list(Plot_a, Plot_b,Plot_c)
-    wrap_plots(Plots_combined, nrow = 3) +
-      plot_layout(guides = "keep")
-
+    # Plot_a<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp4,
+    #                            vars = c("high_quality_yield"),
+    #                            method = 'smooth_simple_overlay',
+    #                            base_size = 7)+
+    #   theme(axis.text = element_text(colour = "black", size = 10),
+    #         axis.title = element_text(colour = "black", size = 10),
+    #         legend.position = "none")+
+    #   xlab("Qualitätsertrag [t/ha]")+
+    #   ylab("Häufigkeit")
+    # Plot_b<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp4,
+    #                            vars = c("total_yield"),
+    #                            method = 'smooth_simple_overlay',
+    #                            base_size = 7)+
+    #   theme(axis.text = element_text(colour = "black", size = 10),
+    #         axis.title = element_text(colour = "black", size = 10),
+    #         legend.position = "none")+
+    #   xlab("Gesamtertrag [t/ha]")+
+    #   ylab("Häufigkeit")
+    # Plot_c<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp4,
+    #                            vars = c("fruits_per_tree"),
+    #                            method = 'smooth_simple_overlay',
+    #                            base_size = 7)+
+    #   theme(axis.text = element_text(colour = "black", size = 10),
+    #         axis.title = element_text(colour = "black", size = 10),
+    #         legend.position = "none")+
+    #   xlab("Früchte pro Baum")+
+    #   ylab("Häufigkeit")
+    # 
+    # library(patchwork)
+    # Plots_combined <- list(Plot_a, Plot_b,Plot_c)
+    # wrap_plots(Plots_combined, nrow = 3) +
+    #   plot_layout(guides = "keep")
+    
   })
   
   output$TP3 <- renderPlot({
@@ -779,7 +794,7 @@ server <- function(input, output) {
     write.csv(Management_values3, "test_management_values3.csv")
     library(decisionSupport)
     library(tidyverse)
-
+    
     variable<-c("apples_per_tree_tp3", "already_damaged_tp3", "trees_per_ha_3", "diameter_fruit_tp3")
     distribution<-c("posnorm", "tnorm_0_1","const","posnorm")
     lower<-c(input$y3[1],input$z3[1]/100,input$x3,input$Durchmesser3[1])
@@ -788,18 +803,18 @@ server <- function(input, output) {
     unit<-c("apples","%","trees","g")
     Apple_prediction_slider_input<-data.frame(variable,distribution,lower,median,upper,unit)
     #orchard_data<-read.csv2("2024_test_apple/test_input.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character"), sep = ";", dec = ".")
-    #Apple_prediction_input<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
-    Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
+    Apple_prediction_input<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
+    #Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
     
-
-
-
-
+    
+    
+    
+    
     source("management_values3.R")
     
-
+    
     #Quality and Yield tp3####
-
+    
     tp_3_quality_and_yield_prediction<-function(){
       quality_tp4_p3<-quality_tp3_function(n_fruits_3=round(apples_per_tree_tp3),
                                            visibly_damaged_3=already_damaged_tp3,
@@ -858,7 +873,7 @@ server <- function(input, output) {
         #daily_weight_increase_3=daily_weight_increase_tp3_tp4,
         #change_weight_increase_overbearing_3 = weight_increase_change_overbearing,
         #change_weight_increase_underbearing_3 =weight_increase_change_underbearing,
-        #fruit_weight_3=g_fruit_tp3,
+        #fruit_weight_3=diameter_fruit_tp3,
         timespan_3=timespan_tp1_tp3,
         total_timespan = timespan_tp1_harvest,
         timespan_4=timespan_tp4_harvest,
@@ -979,64 +994,78 @@ server <- function(input, output) {
                                                               model_function = tp_3_quality_and_yield_prediction,
                                                               numberOfModelRuns = input$runs3,
                                                               functionSyntax = "plainNames")
-
-    Plot_a<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp3,
-                               vars = c("high_quality_yield_diameter"),
-                               method = 'smooth_simple_overlay',
-                               base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Qualitätsertrag [t/ha]")+
+    plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp3,
+                       vars = c("high_quality_yield_diameter","total_yield_diameter"),
+                       method = 'smooth_simple_overlay',
+                       base_size = 7,
+                       colors = c("#0A655E", "#429323"),
+                       old_names = c("high_quality_yield_diameter","total_yield_diameter"),
+                       new_names = c("Qualitätsertrag","Gesamtertrag"))+
+      theme(axis.text = element_text(colour = "black", size = 15),
+            axis.title = element_text(colour = "black", size = 15),
+            legend.position = "inside",
+            legend.position.inside = c(0.7,0.8),
+            legend.text = element_text(size = 15),
+            legend.title = element_blank())+
+      xlab("Ertrag [t/ha]")+
       ylab("Häufigkeit")
-    Plot_b<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp3,
-                               vars = c("total_yield_diameter"),
-                               method = 'smooth_simple_overlay',
-                               base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Gesamtertrag [t/ha]")+
-      ylab("Häufigkeit")
-    Plot_c<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp3,
-                               vars = c("fruits_per_tree"),
-                               method = 'smooth_simple_overlay',
-                               base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Früchte pro Baum")+
-      ylab("Häufigkeit")
-
-    library(patchwork)
-    Plots_combined <- list(Plot_a, Plot_b,Plot_c)
-    wrap_plots(Plots_combined, nrow = 3) +
-      plot_layout(guides = "keep")
-
+    # Plot_a<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp3,
+    #                            vars = c("high_quality_yield"),
+    #                            method = 'smooth_simple_overlay',
+    #                            base_size = 7)+
+    #   theme(axis.text = element_text(colour = "black", size = 10),
+    #         axis.title = element_text(colour = "black", size = 10),
+    #         legend.position = "none")+
+    #   xlab("Qualitätsertrag [t/ha]")+
+    #   ylab("Häufigkeit")
+    # Plot_b<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp3,
+    #                            vars = c("total_yield"),
+    #                            method = 'smooth_simple_overlay',
+    #                            base_size = 7)+
+    #   theme(axis.text = element_text(colour = "black", size = 10),
+    #         axis.title = element_text(colour = "black", size = 10),
+    #         legend.position = "none")+
+    #   xlab("Gesamtertrag [t/ha]")+
+    #   ylab("Häufigkeit")
+    # Plot_c<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp3,
+    #                            vars = c("fruits_per_tree"),
+    #                            method = 'smooth_simple_overlay',
+    #                            base_size = 7)+
+    #   theme(axis.text = element_text(colour = "black", size = 10),
+    #         axis.title = element_text(colour = "black", size = 10),
+    #         legend.position = "none")+
+    #   xlab("Früchte pro Baum")+
+    #   ylab("Häufigkeit")
+    # 
+    # library(patchwork)
+    # Plots_combined <- list(Plot_a, Plot_b,Plot_c)
+    # wrap_plots(Plots_combined, nrow = 3) +
+    #   plot_layout(guides = "keep")
+    # 
   })
-
+  
   output$TP2 <- renderPlot({
     Management_valuestp2<-data.frame(management_measure=c("chemical_fruit_thinning",
                                                           "pollinator_support",
-      "manual_thinning_after_june_drop",
-                                                        "spray_against_pre_harvest_fruit_drop",
-                                                        "hailnet",
-                                                        "climatizing_ov_irrigation",
-                                                        "leaf_fertilization",
-                                                        "summer_pruning",
-                                                        "removing_leaves",
-                                                        "use_kaolin",
-                                                        "irrigation"),value= as.numeric(c(input$chemical_fruit_thinning2,
-                                                                                          input$pollinator_support2,
-                                                                                          input$manual_thinning2,
-                                                                                          input$drop2,
-                                                                                          input$hailnet2,
-                                                                                          input$cl_irri2,
-                                                                                          input$foliar_fert2,
-                                                                                          input$summer_pruning2,
-                                                                                          input$removing_leaves2,
-                                                                                          input$kaolin2,
-                                                                                          input$irrigation2)))
+                                                          "manual_thinning_after_june_drop",
+                                                          "spray_against_pre_harvest_fruit_drop",
+                                                          "hailnet",
+                                                          "climatizing_ov_irrigation",
+                                                          "leaf_fertilization",
+                                                          "summer_pruning",
+                                                          "removing_leaves",
+                                                          "use_kaolin",
+                                                          "irrigation"),value= as.numeric(c(input$chemical_fruit_thinning2,
+                                                                                            input$pollinator_support2,
+                                                                                            input$manual_thinning2,
+                                                                                            input$drop2,
+                                                                                            input$hailnet2,
+                                                                                            input$cl_irri2,
+                                                                                            input$foliar_fert2,
+                                                                                            input$summer_pruning2,
+                                                                                            input$removing_leaves2,
+                                                                                            input$kaolin2,
+                                                                                            input$irrigation2)))
     write.csv(Management_valuestp2, "test_management_values2.csv")
     library(decisionSupport)
     library(tidyverse)
@@ -1049,8 +1078,8 @@ server <- function(input, output) {
     unit<-c("apples","%","trees","g")
     Apple_prediction_slider_input<-data.frame(variable,distribution,lower,median,upper,unit)
     #orchard_data<-read.csv2("2024_test_apple/test_input.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character"), sep = ";", dec = ".")
-    #Apple_prediction_input<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
-    Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
+    Apple_prediction_input<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
+    #Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
     
     
     
@@ -1059,8 +1088,8 @@ server <- function(input, output) {
     source("management_values2.R")
     
     
+    #Quality and Yield tp2####
     
-    #Quality and Yield tp 2####
     
     tp_2_quality_and_yield_prediction<-function(){
       
@@ -1107,7 +1136,7 @@ server <- function(input, output) {
                                                    #daily_weight_increase_2=daily_weight_increase_tp2_tp3,
                                                    #change_weight_increase_overbearing_2=weight_increase_change_overbearing,
                                                    #change_weight_increase_underbearing_2=weight_increase_change_underbearing,
-                                                   #fruit_weight_2=g_fruit_tp2,
+                                                   #fruit_weight_2=diameter_fruit_tp2,
                                                    timespan_3=timespan_tp1_tp3,
                                                    timespan_1=timespan_tp1_tp2,
                                                    #reducing_factor_weight_increase_stress_2=weight_increase_reducing_factor_stress_tp2_tp3,
@@ -1306,40 +1335,54 @@ server <- function(input, output) {
                                                               model_function = tp_2_quality_and_yield_prediction,
                                                               numberOfModelRuns = input$runs2,
                                                               functionSyntax = "plainNames")
-    
-    Plot_a<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp2,
-                               vars = c("high_quality_yield_diameter"),
-                               method = 'smooth_simple_overlay',
-                               base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Qualitätsertrag [t/ha]")+
+    plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp2,
+                       vars = c("high_quality_yield_diameter","total_yield_diameter"),
+                       method = 'smooth_simple_overlay',
+                       base_size = 7,
+                       colors = c("#0A655E", "#429323"),
+                       old_names = c("high_quality_yield_diameter","total_yield_diameter"),
+                       new_names = c("Qualitätsertrag","Gesamtertrag"))+
+      theme(axis.text = element_text(colour = "black", size = 15),
+            axis.title = element_text(colour = "black", size = 15),
+            legend.position = "inside",
+            legend.position.inside = c(0.7,0.8),
+            legend.text = element_text(size = 15),
+            legend.title = element_blank())+
+      xlab("Ertrag [t/ha]")+
       ylab("Häufigkeit")
-    Plot_b<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp2,
-                               vars = c("total_yield_diameter"),
-                               method = 'smooth_simple_overlay',
-                               base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Gesamtertrag [t/ha]")+
-      ylab("Häufigkeit")
-    Plot_c<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp2,
-                               vars = c("fruits_per_tree"),
-                               method = 'smooth_simple_overlay',
-                               base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Früchte pro Baum")+
-      ylab("Häufigkeit")
-    
-    library(patchwork)
-    Plots_combined <- list(Plot_a, Plot_b,Plot_c)
-    wrap_plots(Plots_combined, nrow = 3) +
-      plot_layout(guides = "keep")
-    
+    # Plot_a<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp2,
+    #                            vars = c("high_quality_yield"),
+    #                            method = 'smooth_simple_overlay',
+    #                            base_size = 7)+
+    #   theme(axis.text = element_text(colour = "black", size = 10),
+    #         axis.title = element_text(colour = "black", size = 10),
+    #         legend.position = "none")+
+    #   xlab("Qualitätsertrag [t/ha]")+
+    #   ylab("Häufigkeit")
+    # Plot_b<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp2,
+    #                            vars = c("total_yield"),
+    #                            method = 'smooth_simple_overlay',
+    #                            base_size = 7)+
+    #   theme(axis.text = element_text(colour = "black", size = 10),
+    #         axis.title = element_text(colour = "black", size = 10),
+    #         legend.position = "none")+
+    #   xlab("Gesamtertrag [t/ha]")+
+    #   ylab("Häufigkeit")
+    # Plot_c<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp2,
+    #                            vars = c("fruits_per_tree"),
+    #                            method = 'smooth_simple_overlay',
+    #                            base_size = 7)+
+    #   theme(axis.text = element_text(colour = "black", size = 10),
+    #         axis.title = element_text(colour = "black", size = 10),
+    #         legend.position = "none")+
+    #   xlab("Früchte pro Baum")+
+    #   ylab("Häufigkeit")
+    # 
+    # library(patchwork)
+    # Plots_combined <- list(Plot_a, Plot_b,Plot_c)
+    # wrap_plots(Plots_combined, nrow = 3) +
+    #   plot_layout(guides = "keep")
+    # 
   })
   output$TP1 <- renderPlot({
     Management_valuestp1<-data.frame(management_measure=c("mechanical_flower_thinning",
@@ -1381,8 +1424,8 @@ server <- function(input, output) {
     unit<-c("trees","flowers")
     Apple_prediction_slider_input<-data.frame(variable,distribution,lower,median,upper,unit)
     #orchard_data<-read.csv2("2024_test_apple/test_input.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character"), sep = ";", dec = ".")
-    #Apple_prediction_input<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
-    Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
+    Apple_prediction_input<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
+    #Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
     
     
     
@@ -1674,41 +1717,51 @@ server <- function(input, output) {
                                                               numberOfModelRuns = input$runs1,
                                                               functionSyntax = "plainNames")
     
-    Plot_a<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp1,
-                               vars = c("high_quality_yield_diameter"),
+    #Plot_a<-
+      plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp1,
+                               vars = c("high_quality_yield_diameter","total_yield_diameter"),
                                method = 'smooth_simple_overlay',
-                               base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Qualitätsertrag [t/ha]")+
+                               base_size = 7,
+                               colors = c("#0A655E", "#429323"),
+                               old_names = c("high_quality_yield_diameter","total_yield_diameter"),
+                               new_names = c("Qualitätsertrag","Gesamtertrag"))+
+      theme(axis.text = element_text(colour = "black", size = 15),
+            axis.title = element_text(colour = "black", size = 15),
+            legend.position = "inside",
+            legend.position.inside = c(0.7,0.8),
+            legend.text = element_text(size = 15),
+            legend.title = element_blank())+
+      xlab("Ertrag [t/ha]")+
       ylab("Häufigkeit")
-    Plot_b<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp1,
-                               vars = c("total_yield_diameter"),
-                               method = 'smooth_simple_overlay',
-                               base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Gesamtertrag [t/ha]")+
-      ylab("Häufigkeit")
-    Plot_c<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp1,
-                               vars = c("fruits_per_tree"),
-                               method = 'smooth_simple_overlay',
-                               base_size = 7)+
-      theme(axis.text = element_text(colour = "black", size = 10),
-            axis.title = element_text(colour = "black", size = 10),
-            legend.position = "none")+
-      xlab("Früchte pro Baum")+
-      ylab("Häufigkeit")
-    
-    library(patchwork)
-    Plots_combined <- list(Plot_a, Plot_b,Plot_c)
-    wrap_plots(Plots_combined, nrow = 3) +
-      plot_layout(guides = "keep")
+      
+    # Plot_b<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp1,
+    #                            vars = c("total_yield"),
+    #                            method = 'smooth_simple_overlay',
+    #                            base_size = 7)+
+    #   theme(axis.text = element_text(colour = "black", size = 10),
+    #         axis.title = element_text(colour = "black", size = 10),
+    #         legend.position = "none")+
+    #   xlab("Gesamtertrag [t/ha]")+
+    #   ylab("Häufigkeit")
+    # Plot_c<-plot_distributions(mcSimulation_object = apple_quality_and_yield_mc_simulation_tp1,
+    #                            vars = c("fruits_per_tree"),
+    #                            method = 'smooth_simple_overlay',
+    #                            base_size = 7)+
+    #   theme(axis.text = element_text(colour = "black", size = 10),
+    #         axis.title = element_text(colour = "black", size = 10),
+    #         legend.position = "none")+
+    #   xlab("Früchte pro Baum")+
+    #   ylab("Häufigkeit")
+    # 
+    # library(patchwork)
+    # Plots_combined <- list(Plot_a,
+    #                        #Plot_b,
+    #                        Plot_c)
+    # wrap_plots(Plots_combined, nrow = 2) +
+    #   plot_layout(guides = "keep")
     
   })
-  output$input_datasheet<-DT::renderDT(rbind(Apple_input[1:6], Apple_estimation[1:6]))
+  #output$input_datasheet<-DT::renderDT(rbind(Apple_input[1:6], Apple_estimation[1:6]))
 }
 
 # Run the application 
