@@ -1,7 +1,7 @@
 "","management_measure","value"
 "1","chemical_fruit_thinning",0
 "2","pollinator_support",0
-"3","manual_thinning_after_june_drop",0
+"3","manual_thinning_after_june_drop",1
 "4","spray_against_pre_harvest_fruit_drop",0
 "5","hailnet",0
 "6","climatizing_ov_irrigation",0
