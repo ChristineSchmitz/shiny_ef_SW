@@ -15,7 +15,7 @@ library(reactable)
 Apple_input<-read.csv2("apple_quality_input_manuscript.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character","character"), sep = ";", dec = ".")
 Apple_estimation<-read.csv2("apple_estimation_manuscript.csv",colClasses = c("character", "character", "numeric", "character","numeric", "character","character"), sep = ";", dec = ".")
 
-Apple_prediction_input_csv<-rbind(Apple_input[1:6], Apple_estimation[1:6])
+Apple_prediction_input_csv<-rbind(Apple_input[1:7], Apple_estimation[1:7])
 source("functions_v2.R")
 #Management_values<-data.frame(management_measure,value)
 
@@ -555,7 +555,8 @@ server <- function(input, output) {
       lower = "Untere",
       median="Median (NA)",
       upper = "Obere",
-      Unit = "Einheit"
+      Unit = "Einheit",
+      description = "Beschreibung"
     ),
     var_edit=list("lower", "upper"),
     add_default_values = list(
@@ -609,7 +610,7 @@ server <- function(input, output) {
     Apple_prediction_slider_input<-data.frame(variable,distribution,lower,median,upper,unit)
     #orchard_data<-read.csv2("2024_test_apple/test_input.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character"), sep = ";", dec = ".")
     #Apple_prediction_input_raw<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
-    Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
+    Apple_prediction_input<-rbind(edited_r()[1:6], Apple_prediction_slider_input)
     
     source("management_values.R")
 
@@ -789,7 +790,7 @@ server <- function(input, output) {
     Apple_prediction_slider_input<-data.frame(variable,distribution,lower,median,upper,unit)
     #orchard_data<-read.csv2("2024_test_apple/test_input.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character"), sep = ";", dec = ".")
     #Apple_prediction_input<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
-    Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
+    Apple_prediction_input<-rbind(edited_r()[1:6], Apple_prediction_slider_input)
     
 
 
@@ -1050,7 +1051,7 @@ server <- function(input, output) {
     Apple_prediction_slider_input<-data.frame(variable,distribution,lower,median,upper,unit)
     #orchard_data<-read.csv2("2024_test_apple/test_input.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character"), sep = ";", dec = ".")
     #Apple_prediction_input<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
-    Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
+    Apple_prediction_input<-rbind(edited_r()[1:6], Apple_prediction_slider_input)
     
     
     
@@ -1382,7 +1383,7 @@ server <- function(input, output) {
     Apple_prediction_slider_input<-data.frame(variable,distribution,lower,median,upper,unit)
     #orchard_data<-read.csv2("2024_test_apple/test_input.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character"), sep = ";", dec = ".")
     #Apple_prediction_input<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
-    Apple_prediction_input<-rbind(edited_r(), Apple_prediction_slider_input)
+    Apple_prediction_input<-rbind(edited_r()[1:6], Apple_prediction_slider_input)
     
     
     
@@ -1708,7 +1709,7 @@ server <- function(input, output) {
       plot_layout(guides = "keep")
     
   })
-  output$input_datasheet<-DT::renderDT(rbind(Apple_input[1:6], Apple_estimation[1:6]))
+  output$input_datasheet<-DT::renderDT(rbind(Apple_input[1:7], Apple_estimation[1:7]))
 }
 
 # Run the application 
