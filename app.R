@@ -516,19 +516,17 @@ ui <- fluidPage(
                         mainPanel(
                           plotOutput("TP1",height = "600px")#,
                           #plotOutput("distPlot2")
-                        )))#,
-             # tabPanel(title = (span(img(src="data.png", height =80),"Datenübersicht")),
-             #          
-             #          
-             #          # Show a plot of the generated distribution
-             #          mainPanel(
-             #            #tags$h2(i18n("Edit data"), align = "center"),
-             #            edit_data_ui(id = "id")#,
-             #            #verbatimTextOutput("result")
-             #            
-             #            #dataTableOutput("input_datasheet")#,
-             #            #plotOutput("distPlot2")
-             #          ))
+                        ))),
+              tabPanel(title = (span(img(src="data.png", height =80),"Infos")),
+
+                      mainPanel(
+                        #tags$h2(i18n("Edit data"), align = "center"),
+                        uiOutput("text")#,
+                        #verbatimTextOutput("result")
+
+                        #dataTableOutput("input_datasheet")#,
+                        #plotOutput("distPlot2")
+                      ))
              #https://stackoverflow.com/questions/30086881/how-can-i-control-the-size-of-the-numbers-on-my-slider-in-shiny
              
   )
@@ -1761,7 +1759,31 @@ server <- function(input, output) {
     #   plot_layout(guides = "keep")
     
   })
-  #output$input_datasheet<-DT::renderDT(rbind(Apple_input[1:6], Apple_estimation[1:6]))
+  output$text <- renderUI({
+    url <- a("Experimentierfelds Suedwest", href="https://ef-sw.de")
+    logo<-img(src="BMEL_BLE.png", height =200)
+    HTML(paste("<b>Entwicklung der App:</b> Christine Schmitz<sup>1,2</sup><br>",
+               "<b>Entwicklung des Modells:</b> Christine Schmitz<sup>1,2</sup>, Lars Zimmermann<sup>1,2</sup>, Katja Schiffers<sup>2</sup>, Eike Luedeling<sup>2</sup> <br>",
+               "<br>",
+               "<sup>1</sup>Dienstleistungszentrum Ländlicher Raum Rheinpfalz, Campus Klein-Altendorf 2, 53359 Rheinbach, Germany <br>",
+               "<sup>2</sup>INRES – Horticultural Sciences, University of Bonn, Auf dem Hügel 6, 53121 Bonn, Germany.",
+               "<br>",
+               "Kontakt: christine.schmitz@dlr.rlp.de<br>",
+               "<br>",
+               "<b>Idee hinter dem Modell:</b><br>",
+               "Ziel des Modelles ist die Abschätzung des zu erwartende Gesamtertrags und des Qualitätsertrags von Äpfeln bei der Ernte zu vier entscheidenden Zeitpunkten im Produktionszyklus: (i) zur Vollblüte, (ii) vor dem Ausdünnen der Früchte, (iii) nach dem Junifall und (iv) vier Wochen vor der Ernte. Solche Prognosen können Obstbauern und Vermarktern sowohl bei kurzfristigen betrieblichen Entscheidungen während der Vegetationsperiode als auch bei der langfristigen strategischen Planung helfen.<br>",
+               "<br>",
+               "<b>Methodik</b><br>",
+               "Das Modell wurde mit Hilfe des probabilistischen Modellierungsansatzes, der auf Techniken der Entscheidungsanalyse basiert erstellt. Dies beinhaltet eine Erarbeitung der Modellgrundlage und Inputwerte mit Experten aus der Obstbranche, die Verwendung vom Wertebereichen als Inputvariablen im Rahmen einer Monte-Carlo Simulation.<br>",
+               "Auch wenn die Unsicherheit und die natürliche Variabilität der Inputwerte zu breiten Ergebnisverteilungen führen, geben diese Verteilungen ein ehrliches Bild der potenziellen Ernteergebnisse in einer Apfelplantage. <br>",
+               "<br>",
+               "<b>Förderung</b><br>",
+               "Die Entwicklung des Modelles und der App wurde im Rahmen des<br>",
+               url,
+               " durchgeführt und wurde vom Bundesministerium für Landwirtschaft und Ernährung gefördert (Förderkennzeichen 28DE111B22)<br>",
+               logo,
+               sep = ""))
+  })
 }
 
 # Run the application 

@@ -12,7 +12,7 @@ aphids_risk_tp1_tp2;tnorm_0_1;0.1;NA;0.3;%/100;Risk of aphid damage (tp1-tp2)
 aphids_risk_tp2_tp3;tnorm_0_1;0.005;NA;0.1;%/100;Risk of aphid damage (tp2-tp3)
 aphids_risk_tp3_tp4;const;0;NA;0;%/100;Risk of aphid damage (tp3-tp4)
 aphids_risk_tp4_harvest;const;0;NA;0;%/100;Risk of aphid damage (tp4-harvest)
-apple_fruit_density_at_harvest;posnorm;0.8;NA;0.9;g/cm³;Apple mass density at harvest
+apple_fruit_density_at_harvest;posnorm;0.8;NA;0.9;g/cm3;Apple mass density at harvest
 bad_seed_structure_deformation_tp2;tnorm_0_1;0.01;NA;0.25;%/100;Percentage of deformed apples in case of bad seed structure (tp2-tp3)
 bad_seed_structure_reduce_pollinator_support;tnorm_0_1;0.05;NA;0.45;%/100;Percentage reduce of the risk of bad seed structure by pollinator support
 bird_damage_tp3_tp4;tnorm_0_1;0.025;NA;0.05;%/100;Percentage of apples damaged by birds (tp3-tp4)
@@ -179,11 +179,11 @@ sunburn_risk_hailnet_tp3_tp4;tnorm_0_1;0.2;NA;0.4;%/100;Risk of sunburn despite 
 sunburn_risk_hailnet_tp4_harvest;tnorm_0_1;0.2;NA;0.4;%/100;Risk of sunburn despite hail net (tp4-harvest)
 sunburn_risk_tp3_tp4;tnorm_0_1;0.3;NA;0.8;%/100;Risk of sunburn (tp3-tp4)
 sunburn_risk_tp4_harvest;tnorm_0_1;0.24;NA;0.64;%/100;Risk of sunburn (tp4-harvest)
-thinner_efficiency_chemical_fruit_thinning;tnorm_0_1;0.15;NA;0.5;%/100;Thinner efficiency chemical fruit thinning (tp2-tp3)
+thinner_efficiency_chemical_fruit_thinning;tnorm_0_1;0.15;NA;0.5;%/100;Thinner efficiency in chemical fruit thinning (tp2-tp3)
 timespan_tp1_harvest;posnorm;130;NA;142;days;Timespan from full bloom to begin of harvest
 timespan_tp1_tp2;posnorm;15;NA;20;days;Timespan from full bloom until shortly before chemical fruit thinning
 timespan_tp1_tp3;posnorm;42;NA;56;days;Timespan from full bloom until end of June drop
-timespan_tp4_harvest;posnorm;28;NA;35;days;Timespan 4 weeks before the estimated harvest date
+timespan_tp4_harvest;posnorm;28;NA;35;days;Actual duration from 4 weeks before the estimated harvest date to harvest date
 weekly_diameter_increase_tp2_tp3;posnorm;0.35;NA;0.5;cm;Weekly diameter increase (tp2-tp3)
 weekly_diameter_increase_tp3_tp4;posnorm;0.35;NA;0.55;cm;Weekly diameter increase (tp3-tp4)
 weekly_diameter_increase_tp4_harvest;posnorm;0.15;NA;0.35;cm;Weekly diameter increase (tp4-harvest)
