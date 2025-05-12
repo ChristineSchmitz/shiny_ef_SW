@@ -517,7 +517,7 @@ ui <- fluidPage(
                           plotOutput("TP1",height = "600px")#,
                           #plotOutput("distPlot2")
                         ))),
-              tabPanel(title = (span(img(src="data.png", height =80),"Infos")),
+              tabPanel(title = (span(img(src="Info.png", height =80),"Infos")),
 
                       mainPanel(
                         #tags$h2(i18n("Edit data"), align = "center"),
